@@ -1,0 +1,12 @@
+kprobe:ib_post_send
+{
+  @send[tid] = nsecs;
+}
+
+kretprobe:ib_post_send
+/@send[tid]/
+{
+  printf("%llu %d\n", nsecs - @send[tid], tid);
+  delete(@send[tid]);
+}
+

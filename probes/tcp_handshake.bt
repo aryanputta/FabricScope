@@ -1,0 +1,4 @@
+tracepoint:tcp:tcp_probe
+{
+  printf("%llu %u %u\n", nsecs, args->snd_cwnd, args->srtt);
+}

@@ -1,0 +1,5 @@
+tracepoint:tcp:tcp_retransmit_skb
+{
+  printf("%llu %s %d\n", nsecs, comm, args->sport);
+}
+

@@ -1,0 +1,21 @@
+{
+  "title": "FabricScope Overview",
+  "panels": [
+    {
+      "title": "Events",
+      "type": "stat",
+      "targets": [{"expr": "fabricscope_events_total"}]
+    },
+    {
+      "title": "Congestion Epochs",
+      "type": "stat",
+      "targets": [{"expr": "fabricscope_congestion_epochs_total"}]
+    },
+    {
+      "title": "Hotspot Score",
+      "type": "timeseries",
+      "targets": [{"expr": "fabricscope_hotspot_score"}]
+    }
+  ]
+}
+

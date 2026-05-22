@@ -1,0 +1,16 @@
+# HELP fabricscope_events_total Number of ingested events.
+# TYPE fabricscope_events_total gauge
+fabricscope_events_total 10
+# HELP fabricscope_congestion_epochs_total Count of detected congestion epochs.
+# TYPE fabricscope_congestion_epochs_total gauge
+fabricscope_congestion_epochs_total 5
+fabricscope_hotspot_score{src="gpu-07",dst="leaf-02"} 46.02
+fabricscope_hotspot_retransmissions{src="gpu-07",dst="leaf-02"} 3
+fabricscope_hotspot_score{src="gpu-04",dst="leaf-02"} 36.14
+fabricscope_hotspot_retransmissions{src="gpu-04",dst="leaf-02"} 1
+fabricscope_hotspot_score{src="gpu-03",dst="leaf-02"} 35.5
+fabricscope_hotspot_retransmissions{src="gpu-03",dst="leaf-02"} 2
+fabricscope_hotspot_score{src="gpu-10",dst="leaf-04"} 22.64
+fabricscope_hotspot_retransmissions{src="gpu-10",dst="leaf-04"} 1
+fabricscope_hotspot_score{src="gpu-08",dst="leaf-01"} 20.78
+fabricscope_hotspot_retransmissions{src="gpu-08",dst="leaf-01"} 1
