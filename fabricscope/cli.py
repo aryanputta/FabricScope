@@ -5,6 +5,7 @@ import json
 
 from fabricscope.analyzer import build_report
 from fabricscope.exporter import export_prometheus
+from fabricscope.live_capture import summarize_retrans_stream
 from fabricscope.runtime_compare import compare_runtime
 
 
@@ -39,6 +40,18 @@ def main() -> None:
         help="Output format.",
     )
 
+    live_cmd = subparsers.add_parser(
+        "summarize-retrans",
+        help="Summarize a bpftrace-style retransmission stream.",
+    )
+    live_cmd.add_argument("--input", required=True, help="Path to retransmission text log.")
+    live_cmd.add_argument(
+        "--format",
+        choices=("json", "pretty"),
+        default="pretty",
+        help="Output format.",
+    )
+
     args = parser.parse_args()
     if args.command == "export-prometheus":
         print(export_prometheus(args.input, args.output), end="")
@@ -52,6 +65,19 @@ def main() -> None:
             f"packets={payload['packets']} avg_kernel_us={payload['avg_kernel_us']} "
             f"avg_runtime_us={payload['avg_runtime_us']} kernel_share_pct={payload['kernel_share_pct']}"
         )
+        return
+    if args.command == "summarize-retrans":
+        payload = summarize_retrans_stream(args.input)
+        if args.format == "json":
+            print(json.dumps(payload, indent=2, sort_keys=True))
+            return
+        print(f"events={payload['events']}")
+        print("top_processes:")
+        for item in payload["top_processes"]:
+            print(f"  {item['comm']} retrans={item['retransmissions']}")
+        print("top_ports:")
+        for item in payload["top_ports"]:
+            print(f"  {item['src_port']} retrans={item['retransmissions']}")
         return
 
     payload = build_report(args.input)
