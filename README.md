@@ -48,6 +48,7 @@ make test
 ```bash
 .venv/bin/fabricscope report --input data/sample_fabric_events.csv --format json
 .venv/bin/fabricscope export-prometheus --input data/sample_fabric_events.csv --output results/metrics.prom
+.venv/bin/fabricscope export-signalmesh --input data/sample_fabric_events.csv --output results/signalmesh_bundle.json --workload llm-gateway --pod llm-gateway-7f9d --node node-a
 .venv/bin/fabricscope compare-runtime --input data/sample_runtime_trace.csv --format json
 .venv/bin/fabricscope summarize-retrans --input data/sample_tcp_retrans.log --format json
 ```
@@ -58,6 +59,7 @@ make test
 - Provide a starter Grafana dashboard
 - Compare kernel time versus runtime time for a Helios-style runtime trace
 - Summarize a live `tcp_retransmit_skb` capture into process and port hotspots
+- Export bundle-ready host and fabric evidence directly into `SignalMesh`
 
 ## Success Metrics
 

@@ -1,6 +1,8 @@
 from pathlib import Path
 
-from fabricscope.exporter import export_prometheus
+import json
+
+from fabricscope.exporter import export_prometheus, export_signalmesh_bundle
 from fabricscope.live_capture import summarize_retrans_stream
 from fabricscope.runtime_compare import compare_runtime
 
@@ -22,3 +24,20 @@ def test_summarize_retrans_stream_reports_top_process() -> None:
     payload = summarize_retrans_stream("data/sample_tcp_retrans.log")
     assert payload["events"] == 7
     assert payload["top_processes"][0]["comm"] == "python"
+
+
+def test_export_signalmesh_bundle_writes_bundle_and_report(tmp_path: Path) -> None:
+    bundle_path = tmp_path / "bundle.json"
+    payload = export_signalmesh_bundle(
+        "data/sample_fabric_events.csv",
+        str(bundle_path),
+        workload="llm-gateway",
+        pod="llm-gateway-123",
+        node="node-a",
+    )
+    report_path = tmp_path / "fabricscope_report.json"
+    assert bundle_path.exists()
+    assert report_path.exists()
+    saved_bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+    assert payload["fabricscope_reports"][0]["workload"] == "llm-gateway"
+    assert saved_bundle["fabricscope_reports"][0]["path"] == "fabricscope_report.json"

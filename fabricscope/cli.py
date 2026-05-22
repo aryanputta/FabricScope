@@ -4,7 +4,7 @@ import argparse
 import json
 
 from fabricscope.analyzer import build_report
-from fabricscope.exporter import export_prometheus
+from fabricscope.exporter import export_prometheus, export_signalmesh_bundle
 from fabricscope.live_capture import summarize_retrans_stream
 from fabricscope.runtime_compare import compare_runtime
 
@@ -27,6 +27,16 @@ def main() -> None:
     )
     export_cmd.add_argument("--input", required=True, help="Path to CSV event log.")
     export_cmd.add_argument("--output", required=True, help="Output metrics file.")
+
+    signalmesh_cmd = subparsers.add_parser(
+        "export-signalmesh",
+        help="Export a SignalMesh-compatible bundle plus a FabricScope report.",
+    )
+    signalmesh_cmd.add_argument("--input", required=True, help="Path to CSV event log.")
+    signalmesh_cmd.add_argument("--output", required=True, help="Output bundle JSON file.")
+    signalmesh_cmd.add_argument("--workload", required=True, help="Workload name.")
+    signalmesh_cmd.add_argument("--pod", required=True, help="Pod name.")
+    signalmesh_cmd.add_argument("--node", required=True, help="Node name.")
 
     compare_cmd = subparsers.add_parser(
         "compare-runtime",
@@ -55,6 +65,16 @@ def main() -> None:
     args = parser.parse_args()
     if args.command == "export-prometheus":
         print(export_prometheus(args.input, args.output), end="")
+        return
+    if args.command == "export-signalmesh":
+        payload = export_signalmesh_bundle(
+            args.input,
+            args.output,
+            workload=args.workload,
+            pod=args.pod,
+            node=args.node,
+        )
+        print(json.dumps(payload, indent=2, sort_keys=True))
         return
     if args.command == "compare-runtime":
         payload = compare_runtime(args.input)

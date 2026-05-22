@@ -9,7 +9,7 @@
       "source_file": "tests/test_analyzer.py",
       "source_location": "L1",
       "id": "tests_test_analyzer_py",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_analyzer.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "tests/test_analyzer.py",
       "source_location": "L4",
       "id": "test_analyzer_test_hotspots_rank_checkpoint_sync_first",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_hotspots_rank_checkpoint_sync_first()"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "tests/test_analyzer.py",
       "source_location": "L11",
       "id": "test_analyzer_test_report_detects_pause_epochs",
-      "community": 2,
+      "community": 0,
       "norm_label": "test_report_detects_pause_epochs()"
     },
     {
@@ -36,26 +36,44 @@
       "source_file": "tests/test_exporter.py",
       "source_location": "L1",
       "id": "tests_test_exporter_py",
-      "community": 0,
+      "community": 4,
       "norm_label": "test_exporter.py"
     },
     {
       "label": "test_export_prometheus_writes_metrics_file()",
       "file_type": "code",
       "source_file": "tests/test_exporter.py",
-      "source_location": "L7",
+      "source_location": "L10",
       "id": "test_exporter_test_export_prometheus_writes_metrics_file",
-      "community": 0,
+      "community": 4,
       "norm_label": "test_export_prometheus_writes_metrics_file()"
     },
     {
       "label": "test_compare_runtime_reports_kernel_share()",
       "file_type": "code",
       "source_file": "tests/test_exporter.py",
-      "source_location": "L14",
+      "source_location": "L17",
       "id": "test_exporter_test_compare_runtime_reports_kernel_share",
-      "community": 0,
+      "community": 3,
       "norm_label": "test_compare_runtime_reports_kernel_share()"
+    },
+    {
+      "label": "test_summarize_retrans_stream_reports_top_process()",
+      "file_type": "code",
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L23",
+      "id": "test_exporter_test_summarize_retrans_stream_reports_top_process",
+      "community": 4,
+      "norm_label": "test_summarize_retrans_stream_reports_top_process()"
+    },
+    {
+      "label": "test_export_signalmesh_bundle_writes_bundle_and_report()",
+      "file_type": "code",
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L29",
+      "id": "test_exporter_test_export_signalmesh_bundle_writes_bundle_and_report",
+      "community": 2,
+      "norm_label": "test_export_signalmesh_bundle_writes_bundle_and_report()"
     },
     {
       "label": "runtime_compare.py",
@@ -63,7 +81,7 @@
       "source_file": "fabricscope/runtime_compare.py",
       "source_location": "L1",
       "id": "fabricscope_runtime_compare_py",
-      "community": 0,
+      "community": 3,
       "norm_label": "runtime_compare.py"
     },
     {
@@ -72,7 +90,7 @@
       "source_file": "fabricscope/runtime_compare.py",
       "source_location": "L7",
       "id": "runtime_compare_compare_runtime",
-      "community": 0,
+      "community": 3,
       "norm_label": "compare_runtime()"
     },
     {
@@ -81,7 +99,7 @@
       "source_file": "fabricscope/models.py",
       "source_location": "L1",
       "id": "fabricscope_models_py",
-      "community": 3,
+      "community": 0,
       "norm_label": "models.py"
     },
     {
@@ -90,7 +108,7 @@
       "source_file": "fabricscope/models.py",
       "source_location": "L7",
       "id": "models_fabricevent",
-      "community": 3,
+      "community": 0,
       "norm_label": "fabricevent"
     },
     {
@@ -99,7 +117,7 @@
       "source_file": "fabricscope/models.py",
       "source_location": "L20",
       "id": "models_edge",
-      "community": 3,
+      "community": 0,
       "norm_label": "edge()"
     },
     {
@@ -108,17 +126,26 @@
       "source_file": "fabricscope/exporter.py",
       "source_location": "L1",
       "id": "fabricscope_exporter_py",
-      "community": 0,
+      "community": 2,
       "norm_label": "exporter.py"
     },
     {
       "label": "export_prometheus()",
       "file_type": "code",
       "source_file": "fabricscope/exporter.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "id": "exporter_export_prometheus",
-      "community": 0,
+      "community": 2,
       "norm_label": "export_prometheus()"
+    },
+    {
+      "label": "export_signalmesh_bundle()",
+      "file_type": "code",
+      "source_file": "fabricscope/exporter.py",
+      "source_location": "L36",
+      "id": "exporter_export_signalmesh_bundle",
+      "community": 2,
+      "norm_label": "export_signalmesh_bundle()"
     },
     {
       "label": "analyzer.py",
@@ -153,7 +180,7 @@
       "source_file": "fabricscope/analyzer.py",
       "source_location": "L31",
       "id": "analyzer_load_events",
-      "community": 2,
+      "community": 0,
       "norm_label": "load_events()"
     },
     {
@@ -198,7 +225,7 @@
       "source_file": "fabricscope/__init__.py",
       "source_location": "L1",
       "id": "fabricscope_init_py",
-      "community": 4,
+      "community": 6,
       "norm_label": "__init__.py"
     },
     {
@@ -207,17 +234,44 @@
       "source_file": "fabricscope/cli.py",
       "source_location": "L1",
       "id": "fabricscope_cli_py",
-      "community": 0,
+      "community": 2,
       "norm_label": "cli.py"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "fabricscope/cli.py",
-      "source_location": "L11",
+      "source_location": "L12",
       "id": "cli_main",
-      "community": 0,
+      "community": 2,
       "norm_label": "main()"
+    },
+    {
+      "label": "live_capture.py",
+      "file_type": "code",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L1",
+      "id": "fabricscope_live_capture_py",
+      "community": 5,
+      "norm_label": "live_capture.py"
+    },
+    {
+      "label": "parse_retrans_stream()",
+      "file_type": "code",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L7",
+      "id": "live_capture_parse_retrans_stream",
+      "community": 5,
+      "norm_label": "parse_retrans_stream()"
+    },
+    {
+      "label": "summarize_retrans_stream()",
+      "file_type": "code",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L23",
+      "id": "live_capture_summarize_retrans_stream",
+      "community": 5,
+      "norm_label": "summarize_retrans_stream()"
     }
   ],
   "links": [
@@ -285,7 +339,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_exporter.py",
-      "source_location": "L7",
+      "source_location": "L10",
       "weight": 1.0,
       "_src": "tests_test_exporter_py",
       "_tgt": "test_exporter_test_export_prometheus_writes_metrics_file",
@@ -297,12 +351,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_exporter.py",
-      "source_location": "L14",
+      "source_location": "L17",
       "weight": 1.0,
       "_src": "tests_test_exporter_py",
       "_tgt": "test_exporter_test_compare_runtime_reports_kernel_share",
       "source": "tests_test_exporter_py",
       "target": "test_exporter_test_compare_runtime_reports_kernel_share",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "tests_test_exporter_py",
+      "_tgt": "test_exporter_test_summarize_retrans_stream_reports_top_process",
+      "source": "tests_test_exporter_py",
+      "target": "test_exporter_test_summarize_retrans_stream_reports_top_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "tests_test_exporter_py",
+      "_tgt": "test_exporter_test_export_signalmesh_bundle_writes_bundle_and_report",
+      "source": "tests_test_exporter_py",
+      "target": "test_exporter_test_export_signalmesh_bundle_writes_bundle_and_report",
       "confidence_score": 1.0
     },
     {
@@ -330,6 +408,30 @@
       "target": "runtime_compare_compare_runtime"
     },
     {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "test_exporter_test_summarize_retrans_stream_reports_top_process",
+      "_tgt": "live_capture_summarize_retrans_stream",
+      "source": "test_exporter_test_summarize_retrans_stream_reports_top_process",
+      "target": "live_capture_summarize_retrans_stream"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_exporter.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "test_exporter_test_export_signalmesh_bundle_writes_bundle_and_report",
+      "_tgt": "exporter_export_signalmesh_bundle",
+      "source": "test_exporter_test_export_signalmesh_bundle_writes_bundle_and_report",
+      "target": "exporter_export_signalmesh_bundle"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "fabricscope/runtime_compare.py",
@@ -348,8 +450,8 @@
       "source_file": "fabricscope/cli.py",
       "source_location": "L47",
       "weight": 1.0,
-      "_src": "cli_main",
-      "_tgt": "runtime_compare_compare_runtime",
+      "_src": "runtime_compare_compare_runtime",
+      "_tgt": "cli_main",
       "source": "runtime_compare_compare_runtime",
       "target": "cli_main"
     },
@@ -417,12 +519,24 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "fabricscope/exporter.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_src": "fabricscope_exporter_py",
       "_tgt": "exporter_export_prometheus",
       "source": "fabricscope_exporter_py",
       "target": "exporter_export_prometheus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fabricscope/exporter.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "fabricscope_exporter_py",
+      "_tgt": "exporter_export_signalmesh_bundle",
+      "source": "fabricscope_exporter_py",
+      "target": "exporter_export_signalmesh_bundle",
       "confidence_score": 1.0
     },
     {
@@ -447,6 +561,30 @@
       "_src": "exporter_export_prometheus",
       "_tgt": "cli_main",
       "source": "exporter_export_prometheus",
+      "target": "cli_main"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fabricscope/exporter.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "exporter_export_signalmesh_bundle",
+      "_tgt": "analyzer_build_report",
+      "source": "exporter_export_signalmesh_bundle",
+      "target": "analyzer_build_report"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fabricscope/cli.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "cli_main",
+      "_tgt": "exporter_export_signalmesh_bundle",
+      "source": "exporter_export_signalmesh_bundle",
       "target": "cli_main"
     },
     {
@@ -621,12 +759,60 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "fabricscope/cli.py",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_src": "fabricscope_cli_py",
       "_tgt": "cli_main",
       "source": "fabricscope_cli_py",
       "target": "cli_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "fabricscope/cli.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "cli_main",
+      "_tgt": "live_capture_summarize_retrans_stream",
+      "source": "cli_main",
+      "target": "live_capture_summarize_retrans_stream"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "fabricscope_live_capture_py",
+      "_tgt": "live_capture_parse_retrans_stream",
+      "source": "fabricscope_live_capture_py",
+      "target": "live_capture_parse_retrans_stream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "fabricscope_live_capture_py",
+      "_tgt": "live_capture_summarize_retrans_stream",
+      "source": "fabricscope_live_capture_py",
+      "target": "live_capture_summarize_retrans_stream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "fabricscope/live_capture.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "live_capture_summarize_retrans_stream",
+      "_tgt": "live_capture_parse_retrans_stream",
+      "source": "live_capture_parse_retrans_stream",
+      "target": "live_capture_summarize_retrans_stream",
       "confidence_score": 1.0
     }
   ],
